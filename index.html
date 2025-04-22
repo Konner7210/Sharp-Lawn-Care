@@ -5,33 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sharp Lawn Care | Professional Landscaping Services</title>
   <meta content="Enhance your outdoor spaces with Sharp Lawn Care's expert landscaping and lawn care services. Serving Union, MO and surrounding areas." name="description">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharp Lawn Care</title>
+    <style>
+        /* CSS for the top navigation bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        nav a, nav button {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        nav a:hover, nav button:hover {
+            background-color: #575757;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%; /* Position below the dropdown button */
+            left: 0;
+            background-color: #333;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        /* Show dropdown on active */
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <a href="/" class="logo">
-        <img src="logo.png" alt="Sharp Lawn Care Logo">
-      </a>
-      <nav class="navbar">
-        <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li class="dropdown">
-            <a href="#">Services</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Lawn Care</a></li>
-              <li><a href="#">Landscape Design</a></li>
-              <li><a href="#">Hardscaping</a></li>
-            </ul>
-          </li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <div class="dropdown">
+            <button id="dropdownToggle">Menu</button>
+            <div class="dropdown-content">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+        <a href="#blog">Blog</a>
+    </nav>
+
+    <script>
+        // JavaScript to toggle the dropdown menu
+        document.getElementById('dropdownToggle').addEventListener('click', function() {
+            const dropdown = this.parentElement;
+            dropdown.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
 
   <main class="hero">
     <div class="container">
